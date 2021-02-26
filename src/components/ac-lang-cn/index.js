@@ -1,6 +1,7 @@
 
 import React from "react";
 import lang from "ac-lang-cn";
+import Test from './components/Test';
 
 const pack = require('./pack.js').default;
 console.log('pack', pack);
@@ -23,6 +24,7 @@ export default class ACLangCN extends React.Component {
         <div>
           测试词条：<span className="red-font">{ lang.template("TEST") }</span>
         </div>
+        <Test />
       </section>
     );
   }

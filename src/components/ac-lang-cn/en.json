@@ -1,3 +1,4 @@
 {
-  "TEST": "ac lang cn test..."
+  "TEST": "ac lang cn test...",
+  "SINGLETON": "test ac-lang-cn singleton"
 }

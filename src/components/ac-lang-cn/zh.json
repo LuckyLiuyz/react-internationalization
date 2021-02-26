@@ -1,3 +1,4 @@
 {
-  "TEST": "测试ac-lang-cn组件使用"
+  "TEST": "测试ac-lang-cn组件使用",
+  "SINGLETON": "测试ac-lang-cn组件,单例模式特性"
 }
