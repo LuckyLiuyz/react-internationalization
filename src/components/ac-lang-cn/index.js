@@ -1,10 +1,7 @@
 
 import React from "react";
 import lang from "ac-lang-cn";
-import { docCookies } from "../../common/cookieUtils";
 
-// // 设置cookie，用于intl获取默认语种
-docCookies.setItem("locale", "en_US");
 const pack = require('./pack.js').default;
 console.log('pack', pack);
 
@@ -19,6 +16,10 @@ export default class ACLangCN extends React.Component {
   render() {
     return (
       <section>
+        <br />
+        <br />
+        <h1>方案三：ac-lang-cn</h1>
+        <h3>用友体系内封装的多语控件。 </h3>
         <div>
           测试词条：<span className="red-font">{ lang.template("TEST") }</span>
         </div>

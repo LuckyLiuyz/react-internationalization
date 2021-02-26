@@ -51,6 +51,10 @@ export default class IntlUniversal extends React.Component {
     if (this.state.initDone) {
       return (
         <section>
+          <br />
+          <br />
+          <h1>方案二：react-intl-universal</h1>
+          <h3> 由阿里巴巴推出的react国际化库,这个库最好地方在于使用简单方便，侵入性低。 </h3>
           <p>当前cookie：<span className="red-font">{ docCookies.getItem("lang") }</span></p>
           <div>
             测试词条：<span className="red-font">{ intl.get("SIMPLE") }</span>
