@@ -4,7 +4,7 @@ import Test from "./components/Test";
 import { docCookies } from "../../common/cookieUtils";
 
 // 设置cookie，用于intl获取默认语种
-docCookies.setItem("lang", "zh-CN");
+docCookies.setItem("lang", "en-US");
 
 /**
  * 初始化的时候，除了直接指定语言外，还可以由函数determineLocale根据以下配置进行指定：
@@ -51,6 +51,7 @@ export default class IntlUniversal extends React.Component {
     if (this.state.initDone) {
       return (
         <section>
+          <p>当前cookie：<span className="red-font">{ docCookies.getItem("lang") }</span></p>
           <div>
             测试词条：<span className="red-font">{ intl.get("SIMPLE") }</span>
             <br />
