@@ -2,15 +2,22 @@
 import React from "react";
 import lang from "ac-lang-cn";
 import Test from './components/Test';
+import { EPMGetLang, EPMGetCurrLang } from '../../common/langUtils';
+
+console.log('1');
+let language1 = EPMGetLang();
+console.log('2');
+let language2 = EPMGetLang('BCS');
+console.log('3');
+
 
 const pack = require('./pack.js').default;
 console.log('pack', pack);
 
-lang.init(pack, null); // 参数2为localeType，不传递的情况下会从cookie('locale')或者url中 ?locale=***读取
+lang.init(pack, EPMGetCurrLang()); // 参数2为localeType，不传递的情况下会从cookie('locale')或者url中 ?locale=***读取
 console.log(" ************************多语加载成功!***************************");
 
 let test = lang.template("TEST");
-debugger
 
 export default class ACLangCN extends React.Component {
 

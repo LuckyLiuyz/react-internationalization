@@ -3,8 +3,12 @@ import { useTranslation, initReactI18next } from "react-i18next";
 import en from "./en.json";
 import zh from "./zh.json";
 import { docCookies } from "../../common/cookieUtils";
+import { EPMGetLang, EPMGetCurrLang } from '../../common/langUtils';
 
-// // 设置cookie，用于intl获取默认语种
+// 设置cookie，用于intl获取默认语种
+docCookies.setItem("locale", EPMGetCurrLang());
+
+// 设置cookie，用于intl获取默认语种
 const lng = docCookies.getItem("locale");
 console.log('lng', lng);
 

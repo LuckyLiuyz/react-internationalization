@@ -1,4 +1,4 @@
 {
-  "COMMON": "我是公共多语词条",
-  "TEST": "测试单例模式..."
+  "COMMON": "我属于common-zh.json 我是公共多语词条",
+  "TEST": "我属于common-zh.json 测试单例模式..."
 }

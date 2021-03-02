@@ -2,9 +2,10 @@ import React from "react";
 import intl from "react-intl-universal";
 import Test from "./components/Test";
 import { docCookies } from "../../common/cookieUtils";
+import { EPMGetLang, EPMGetCurrLang } from '../../common/langUtils';
 
 // 设置cookie，用于intl获取默认语种
-docCookies.setItem("lang", "en-US");
+docCookies.setItem("lang", EPMGetCurrLang());
 
 /**
  * 初始化的时候，除了直接指定语言外，还可以由函数determineLocale根据以下配置进行指定：
@@ -18,11 +19,11 @@ let currentLocale = intl.determineLocale({
 
 // locale data
 const locales = {
-  "en-US": {
+  "en_US": {
     ...require("./common-en.json"),
     ...require("./universal-en.json")
   },
-  "zh-CN": {
+  "zh_CN": {
     ...require("./common-zh.json"),
     ...require("./universal-zh.json")
   }
